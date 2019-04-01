@@ -2,41 +2,19 @@
 using System.Collections.Generic;
 
 using System.Text;
-using VisualSync;
+using ASWBXML;
 
-namespace VisualSync
+namespace ASWBXML
 {
-    class ASWBXMLCodePage
+    class CodePage
     {
-        private string strNamespace = "";
-        private string strXmlns = "";
         private Dictionary<byte, string> tokenLookup = new Dictionary<byte, string>();
-        private Dictionary<byte, string> docRefLookup = new Dictionary<byte, string>();
         private Dictionary<string, byte> tagLookup = new Dictionary<string, byte>();
+        private Dictionary<byte, string> docRefLookup = new Dictionary<byte, string>();
 
-        public string Namespace
-        {
-            get
-            {
-                return strNamespace;
-            }
-            set
-            {
-                strNamespace = value;
-            }
-        }
+        public string Namespace { get; set; } = "";
 
-        public string Xmlns
-        {
-            get
-            {
-                return strXmlns;
-            }
-            set
-            {
-                strXmlns = value;
-            }
-        }
+        public string Xmlns { get; set; } = "";
 
         public void AddToken(byte token, string tag)
         {

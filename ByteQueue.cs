@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿using System.Collections.Generic;
 using System.Text;
-using VisualSync;
 
-namespace VisualSync
+namespace ASWBXML
 {
-    class ASWBXMLByteQueue : Queue<byte>
+    class ByteQueue : Queue<byte>
     {
-        public ASWBXMLByteQueue(byte[] bytes)
+        public ByteQueue(byte[] bytes)
             : base(bytes)
         {
         }
